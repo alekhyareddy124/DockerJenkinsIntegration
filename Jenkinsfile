@@ -35,14 +35,14 @@ node {
 	
 	sh '''
 	  
-          curl -v -u admin:admin123 --upload-file /var/lib/jenkins/workspace/myproject/target/*.war  http://3.80.54.111:8081/nexus/content/repositories/mycentral
+          curl -v -u admin:admin123 --upload-file /var/lib/jenkins/workspace/myproject/target/*.war  http://54.83.83.37:1816/nexus/content/repositories/myapp
 	'''
 	
 	
 	}
     /*stage('DockerBuild'){
 	
-	app = docker.build("mannam786/mydynamicapp")
+	app = docker.build("kondapureddyalekhya/mydynamicapp")
 	
 	
 	}
@@ -59,7 +59,7 @@ node {
 	stage('Runnning'){
 	
 	sh '''
-	  docker run -d -p 6666:8080 mannam786/mydynamicapp
+	  docker run -d -p 6666:8080 kondapureddyalekhya/mydynamicapp
 	  
 
 	'''
